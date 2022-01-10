@@ -1,12 +1,28 @@
 #include <iostream>
+#include <vector>
 
-int main()
+using namespace std;
+
+int main(int argc, char** argv)
 {
-    int array[] = { 0, 1, 2, 3 };
-
-    for (int i = 0; i < 4; ++i)
+    if (argc < 2)
     {
-        std::cout << array[i] << std::endl;
+        cerr << "Please give a valid number" << endl;
+        return -1;
+    }
+
+    int length = stoi(argv[1]);
+    vector<int> array;
+
+    array.reserve(length);
+    for (int i = 0; i < length; i++)
+    {
+        array.emplace_back(i + 1);
+    }
+
+    for (int number : array)
+    {
+        cout << number << endl;
     }
 
     return 0;

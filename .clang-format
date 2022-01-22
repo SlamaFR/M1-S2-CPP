@@ -27,10 +27,10 @@ BraceWrapping:
   AfterEnum: true
   AfterFunction: true
   AfterStruct: true
-  AfterControlStatement: Always
-  BeforeCatch: true
-  BeforeElse: true
-  BeforeWhile: true
+  AfterControlStatement: Never
+  BeforeCatch: false
+  BeforeElse: false
+  BeforeWhile: false
   BeforeLambdaBody: true
   SplitEmptyFunction: false
   SplitEmptyRecord: false
